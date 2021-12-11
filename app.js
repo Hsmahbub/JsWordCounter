@@ -111,6 +111,7 @@ submit.addEventListener('click', (d) =>{
       result2.innerHTML = newText.length;
       result.innerHTML = count + 1;
       text.value = ''
+
      }
   }
-})
+});
