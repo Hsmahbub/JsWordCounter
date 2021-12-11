@@ -90,16 +90,20 @@ const inputedText = document.getElementById('inputedText')
 
 submit.addEventListener('click', (d) =>{
   d.preventDefault;
-  if (text.value === '') {
+  
+  let textL = '';
+  let newText = text.value += textL
+  let textCheck = newText.replace(/\s+/g, '')
+  let count = 0;
+  if (textCheck === '') {
     alert('Hey man! I am not a stupid.Please enter some text');
   }else{
     
-    let textL = '';
-    let newText = text.value += textL
-    let count = 0;
+
      
      for(let i = 0; i < newText.length; i++){
-      if(newText[i] == ' '){
+       let newTextF = newText.replace(/\s+/g, ' ').trim();
+      if(newTextF[i] == ' '){
       count ++;
         
       }
