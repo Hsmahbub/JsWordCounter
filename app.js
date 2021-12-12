@@ -94,24 +94,22 @@ submit.addEventListener('click', (d) =>{
   let textL = '';
   let newText = text.value += textL
   let textCheck = newText.replace(/\s+/g, '')
-  let count = 0;
   if (textCheck === '') {
     alert('Hey man! I am not a stupid.Please enter some text');
   }else{
-    
 
-     
-     for(let i = 0; i < newText.length; i++){
-       let newTextF = newText.replace(/\s+/g, ' ').trim();
-      if(newTextF[i] == ' '){
-      count ++;
+    //  for(let i = 0; i < newText.length; i++){
+    //    let newTextF = newText.replace(/\s+/g, ' ').trim();
+    //   if(newTextF[i] == ' '){
+    //   count ++;
         
-      }
+    //   }
+
       inputedText.innerHTML = newText;
-      result2.innerHTML = newText.length;
-      result.innerHTML = count + 1;
+      result2.innerHTML = newText.trim().length;
+      result.innerHTML = newText.trim().split(' ').length;
       text.value = ''
 
      }
-  }
+  
 });
